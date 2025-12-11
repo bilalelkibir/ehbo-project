@@ -1,0 +1,89 @@
+/* Flip-cards */
+.flip-card {
+  perspective: 1000px;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 150px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.flip-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: rounded 1rem;
+}
+
+/* voorkant alleen titel */
+.flip-card-front {
+  font-weight: 600;
+}
+
+/* achterkant alleen tekst, geen titel meer */
+.flip-card-back {
+  transform: rotateY(180deg);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* States voor spellen (worden door JS gezet) */
+.spot-item.correct {
+  background-color: #22c55e !important;
+  color: white;
+}
+
+.spot-item.wrong {
+  background-color: #fecaca !important;
+}
+
+.kit-item.correct {
+  background-color: #bbf7d0 !important;
+}
+
+.kit-item.wrong {
+  background-color: #fecaca !important;
+}
+
+
+
+.new-words-btn {
+  background-color: #DE282A;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px; /* volledig rond */
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.new-words-btn:hover {
+  background-color: red;
+}
+
+.quiz-item.correct {
+  background-color: #22c55e !important;
+  color: white;
+}
+
+.quiz-item.wrong {
+  background-color: #fecaca !important;
+}
