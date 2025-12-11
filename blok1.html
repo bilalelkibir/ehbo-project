@@ -1,268 +1,223 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>CALS EHBO Escape – Blok 1</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="custom.css" />
-  </head>
-  <body class="bg-slate-50 text-slate-900">
-    <!-- HEADER -->
-    <header
-      class="sticky top-0 z-20 flex items-center justify-between px-5 md:px-10 py-3 bg-slate-50/90 backdrop-blur border-b border-slate-200/40"
-    >
-      <div class="flex items-center gap-3">
-        <img
-          src="cals-logo.png"
-          alt="CALS logo"
-          class="w-10 h-10 rounded-full"
-        />
-        <div class="leading-tight font-semibold">
-          <div class="tracking-[0.18em] text-xs">CALS</div>
-          <div class="text-sm">EHBO Escape</div>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CALS EHBO Escape – Blok 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="custom.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+  <header
+    class="sticky top-0 z-20 flex items-center justify-between px-5 md:px-10 py-3 bg-slate-50/90 backdrop-blur border-b border-slate-200/40">
+
+    <div class="flex items-center gap-3">
+      <img src="cals-logo.png" alt="CALS logo" class="w-10 h-10 rounded-full" />
+      <div class="leading-tight font-semibold">
+        <div class="tracking-[0.18em] text-xs">CALS</div>
+        <div class="text-sm">EHBO Escape</div>
       </div>
-      <nav class="hidden md:flex gap-6 text-sm font-medium">
-        <a href="index.html" class="hover:text-red-600">Home</a>
-        <a
-          href="blok1.html"
-          class="text-red-600 border-b-2 border-red-600 pb-0.5"
-          >Blok 1</a
-        >
-        <a href="blok3.html" class="hover:text-red-600">Blok 3</a>
-      </nav>
-    </header>
+    </div>
 
-    <main>
-      <!-- SUB HERO -->
-      <section
-        class="px-5 md:px-10 lg:px-20 py-10 grid md:grid-cols-2 gap-8 items-center"
-      >
-        <div class="space-y-3 max-w-xl">
-          <h1
-            class="text-2xl md:text-3xl font-bold font-['Baloo_2',system-ui]"
-          >
-            Blok 1 – Onveilige situaties & risico’s
-          </h1>
-          <p class="text-sm md:text-base text-slate-600">
-            In dit blok leer je vooral <b>voorkomen</b> in plaats van genezen.
-            Je kijkt eerst of een situatie veilig is, welke gevaren er zijn en
-            wanneer je hulp moet inschakelen.
+    <!-- Desktop menu -->
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-red-600">Home</a>
+      <a href="blok1.html" class="hover:text-red-600">Blok 1</a>
+      <a href="blok3.html" class="hover:text-red-600">Blok 3</a>
+    </nav>
+
+    <!-- Hamburger voor mobiel -->
+    <button id="mobileMenuBtn" class="md:hidden text-3xl">
+      ☰
+    </button>
+  </header>
+
+  <!-- Mobiel menu (verstopt tot je klikt) -->
+  <nav id="mobileMenu"
+    class="md:hidden hidden flex-col bg-slate-50 border-b border-slate-200 px-5 py-3 text-sm font-medium">
+    <a href="index.html" class="py-2">Home</a>
+    <a href="blok1.html" class="py-2">Blok 1</a>
+    <a href="blok3.html" class="py-2">Blok 3</a>
+  </nav>
+  <main>
+    <!-- SUB HERO -->
+    <section class="px-5 md:px-10 lg:px-20 py-10 grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-3 max-w-xl">
+        <h1 class="text-2xl md:text-3xl font-bold font-['Baloo_2',system-ui]">
+          Blok 1 – Onveilige situaties & risico’s
+        </h1>
+        <p class="text-sm md:text-base text-slate-600">
+          In dit blok leer je vooral <b>voorkomen</b> in plaats van genezen.
+          Je kijkt eerst of een situatie veilig is, welke gevaren er zijn en
+          wanneer je hulp moet inschakelen.
+        </p>
+        <ul class="list-disc list-inside text-sm text-slate-600">
+          <li>Onveilige situaties herkennen</li>
+          <li>Risico’s inschatten</li>
+          <li>Rustig blijven en de juiste stappen zetten</li>
+        </ul>
+      </div>
+
+      <div class="text-center">
+        <img src="Onveilige-Situaties.png" alt="Onveilige keuken" class="rounded-3xl shadow-xl mx-auto" />
+        <span class="block text-xs text-slate-500 mt-2">
+          Kun jij alle gevaren in deze keuken aanwijzen?
+        </span>
+      </div>
+    </section>
+
+    <!-- PUZZELS + QUIZVRAGEN -->
+    <section class="px-5 md:px-10 lg:px-20 pb-12 bg-white">
+      <div class="max-w-xl mb-6">
+        <h2 class="font-['Baloo_2',system-ui] text-xl md:text-2xl font-bold mb-1">
+          Speel de puzzels
+        </h2>
+        <p class="text-sm md:text-base text-slate-600">
+          Maak de spellen hieronder. De uitleg hoort bij de leerdoelen van
+          Blok 1.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5">
+        <!-- Spot het gevaar -->
+        <article class="bg-slate-50 rounded-3xl shadow-md p-5 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg">🕵️ Spot het gevaar</h3>
+          <p class="text-sm text-slate-600">
+            Klik op alle dingen die gevaarlijk zijn in deze ruimte. Daarna
+            zie je waarom het gevaarlijk is.
           </p>
-          <ul class="list-disc list-inside text-sm text-slate-600">
-            <li>Onveilige situaties herkennen</li>
-            <li>Risico’s inschatten</li>
-            <li>Rustig blijven en de juiste stappen zetten</li>
-          </ul>
-        </div>
 
-        <div class="text-center">
-          <img
-            src="Onveilige-Situaties.png"
-            alt="Onveilige keuken"
-            class="rounded-3xl shadow-xl mx-auto"
-          />
-          <span class="block text-xs text-slate-500 mt-2">
-            Kun jij alle gevaren in deze keuken aanwijzen?
-          </span>
-        </div>
-      </section>
-
-      <!-- PUZZELS + QUIZVRAGEN -->
-      <section class="px-5 md:px-10 lg:px-20 pb-12 bg-white">
-        <div class="max-w-xl mb-6">
-          <h2
-            class="font-['Baloo_2',system-ui] text-xl md:text-2xl font-bold mb-1"
-          >
-            Speel de puzzels
-          </h2>
-          <p class="text-sm md:text-base text-slate-600">
-            Maak de spellen hieronder. De uitleg hoort bij de leerdoelen van
-            Blok 1.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-5">
-          <!-- Spot het gevaar -->
-          <article
-            class="bg-slate-50 rounded-3xl shadow-md p-5 flex flex-col gap-3"
-          >
-            <h3 class="font-semibold text-lg">🕵️ Spot het gevaar</h3>
-            <p class="text-sm text-slate-600">
-              Klik op alle dingen die gevaarlijk zijn in deze ruimte. Daarna
-              zie je waarom het gevaarlijk is.
-            </p>
-
-            <div class="grid grid-cols-2 gap-2 text-sm mt-2">
-              <button
-                class="spot-item px-3 py-2 rounded-xl bg-sky-50 text-left"
-                data-explainer="Water op de vloer kan zorgen dat iemand uitglijdt en zijn hoofd stoot."
-              >
-                Water op de vloer 💧
-              </button>
-              <button
-                class="spot-item px-3 py-2 rounded-xl bg-sky-50 text-left"
-                data-explainer="Losse kabels kunnen struikelgevaar geven. Iemand kan hard vallen."
-              >
-                Losse kabels 🔌
-              </button>
-              <button
-                class="spot-item px-3 py-2 rounded-xl bg-sky-50 text-left"
-                data-explainer="Een mes op de rand kan vallen of iemand kan zich snijden."
-              >
-                Mes op de rand 🔪
-              </button>
-              <button
-                class="spot-item px-3 py-2 rounded-xl bg-sky-50 text-left"
-                data-explainer="Een opgeruimde tafel is hier juist veilig."
-              >
-                Opgeruimde tafel ✅
-              </button>
-            </div>
-
-            <p id="spot-output" class="text-xs text-slate-600 mt-2">
-              Tip: klik op een gevaar om te zien waarom het gevaarlijk is.
-            </p>
-          </article>
-
-          <!-- Volgorde -->
-          <article
-            class="bg-slate-50 rounded-3xl shadow-md p-5 flex flex-col gap-3"
-          >
-            <h3 class="font-semibold text-lg">📋 Wat doe je eerst?</h3>
-            <p class="text-sm text-slate-600">
-              Zet de stappen in de juiste volgorde. Dit is de basis bij elk
-              ongeluk.
-            </p>
-
-            <ol
-              id="order-list"
-              class="space-y-2 text-sm mt-2 cursor-move select-none"
-            >
-              <li data-correct="1" class="bg-indigo-50 rounded-full px-3 py-2">
-                Blijf rustig 😌
-              </li>
-              <li data-correct="2" class="bg-indigo-50 rounded-full px-3 py-2">
-                Kijk of het veilig is 🔍
-              </li>
-              <li data-correct="3" class="bg-indigo-50 rounded-full px-3 py-2">
-                Ga naar het slachtoffer 🤝
-              </li>
-              <li data-correct="4" class="bg-indigo-50 rounded-full px-3 py-2">
-                Bel hulp indien nodig 📞
-              </li>
-            </ol>
-
-            <button
-              id="check-order"
-              class="mt-2 inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-slate-200 text-xs font-semibold bg-white hover:bg-slate-100"
-            >
-              Controleer volgorde
+          <div class="grid grid-cols-2 gap-2 text-sm mt-2">
+            <button class="spot-item px-3 py-2 rounded-xl bg-sky-50 text-left"
+              data-explainer="Water op de vloer kan zorgen dat iemand uitglijdt en zijn hoofd stoot.">
+              Water op de vloer 💧
             </button>
-            <p id="order-feedback" class="text-xs text-slate-600"></p>
-          </article>
+            <button class="spot-item px-3 py-2 rounded-xl bg-sky-50 text-left"
+              data-explainer="Losse kabels kunnen struikelgevaar geven. Iemand kan hard vallen.">
+              Losse kabels 🔌
+            </button>
+            <button class="spot-item px-3 py-2 rounded-xl bg-sky-50 text-left"
+              data-explainer="Een mes op de rand kan vallen of iemand kan zich snijden.">
+              Mes op de rand 🔪
+            </button>
+            <button class="spot-item px-3 py-2 rounded-xl bg-sky-50 text-left"
+              data-explainer="Een opgeruimde tafel is hier juist veilig.">
+              Opgeruimde tafel ✅
+            </button>
+          </div>
 
-          <!-- Quizvraag 1 -->
-          <article
-            class="bg-slate-50 rounded-3xl shadow-md p-5 flex flex-col gap-3"
-          >
-            <h3 class="font-semibold text-lg">❓ Wat is gevaarlijk?</h3>
-            <p class="text-sm text-slate-600">
-              Welke situatie is het meest onveilig?
-            </p>
-
-            <div class="grid grid-cols-1 gap-2 text-sm mt-2">
-              <button
-                class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left"
-                data-correct="false"
-              >
-                Iemand leunt tegen een instabiele stoel 🪑
-              </button>
-
-              <button
-                class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left"
-                data-correct="true"
-              >
-                Iemand rent met een schaar in zijn hand ✂️🏃
-              </button>
-
-              <button
-                class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left"
-                data-correct="false"
-              >
-                Iemand loopt door de gang met een volle mok koffie ☕
-              </button>
-            </div>
-
-            <p class="quiz-feedback text-xs text-slate-600"></p>
-          </article>
-
-          <!-- Quizvraag 2 -->
-          <article
-            class="bg-slate-50 rounded-3xl shadow-md p-5 flex flex-col gap-3"
-          >
-            <h3 class="font-semibold text-lg">❓ Wat doe je eerst?</h3>
-            <p class="text-sm text-slate-600">
-              Je ziet iemand op de grond liggen in een druk lokaal. Wat doe je eerst?
-            </p>
-
-            <div class="grid grid-cols-1 gap-2 text-sm mt-2">
-              <button
-                class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left"
-                data-correct="true"
-              >
-                Eerst kijken of het veilig is 🔍
-              </button>
-
-              <button
-                class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left"
-                data-correct="false"
-              >
-                Meteen aan het slachtoffer zitten 🤲
-              </button>
-
-              <button
-                class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left"
-                data-correct="false"
-              >
-                Weglopen en iemand anders zoeken 🚶
-              </button>
-            </div>
-
-            <p class="quiz-feedback text-xs text-slate-600"></p>
-          </article>
-        </div>
-      </section>
-
-      <!-- extra uitleg -->
-      <section class="px-5 md:px-10 lg:px-20 py-10">
-        <div
-          class="max-w-xl mx-auto bg-white rounded-3xl shadow-lg p-6 space-y-3"
-        >
-          <h2
-            class="font-['Baloo_2',system-ui] text-xl font-bold text-slate-900"
-          >
-            Waarom dit belangrijk is
-          </h2>
-          <p class="text-sm text-slate-600">
-            Als je eerst de situatie veilig maakt, voorkom je dat jij of anderen
-            ook gewond raken. Pas als het veilig is, ga je naar het slachtoffer
-            en kun je echte EHBO geven.
+          <p id="spot-output" class="text-xs text-slate-600 mt-2">
+            Tip: klik op een gevaar om te zien waarom het gevaarlijk is.
           </p>
+        </article>
+
+        <!-- Volgorde -->
+        <article class="bg-slate-50 rounded-3xl shadow-md p-5 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg">📋 Wat doe je eerst?</h3>
           <p class="text-sm text-slate-600">
-            Onthoud:
-            <b>rustig blijven</b>, <b>kijken</b>, <b>denken</b> en dan pas
-            <b>doen</b>.
+            Zet de stappen in de juiste volgorde. Dit is de basis bij elk
+            ongeluk.
           </p>
-        </div>
-      </section>
-    </main>
 
-    <footer class="text-center text-xs text-slate-500 pb-6">
-      Blok 1 – Onveilige situaties & risico’s • CALS EHBO Escape
-    </footer>
+          <ol id="order-list" class="space-y-2 text-sm mt-2 cursor-move select-none">
+            <li data-correct="1" class="bg-indigo-50 rounded-full px-3 py-2">
+              Blijf rustig 😌
+            </li>
+            <li data-correct="2" class="bg-indigo-50 rounded-full px-3 py-2">
+              Kijk of het veilig is 🔍
+            </li>
+            <li data-correct="3" class="bg-indigo-50 rounded-full px-3 py-2">
+              Ga naar het slachtoffer 🤝
+            </li>
+            <li data-correct="4" class="bg-indigo-50 rounded-full px-3 py-2">
+              Bel hulp indien nodig 📞
+            </li>
+          </ol>
 
-    <script src="script.js" defer></script>
-  </body>
+          <button id="check-order"
+            class="mt-2 inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-slate-200 text-xs font-semibold bg-white hover:bg-slate-100">
+            Controleer volgorde
+          </button>
+          <p id="order-feedback" class="text-xs text-slate-600"></p>
+        </article>
+
+        <!-- Quizvraag 1 -->
+        <article class="bg-slate-50 rounded-3xl shadow-md p-5 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg">❓ Wat is gevaarlijk?</h3>
+          <p class="text-sm text-slate-600">
+            Welke situatie is het meest onveilig?
+          </p>
+
+          <div class="grid grid-cols-1 gap-2 text-sm mt-2">
+            <button class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left" data-correct="false">
+              Iemand leunt tegen een instabiele stoel 🪑
+            </button>
+
+            <button class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left" data-correct="true">
+              Iemand rent met een schaar in zijn hand ✂️🏃
+            </button>
+
+            <button class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left" data-correct="false">
+              Iemand loopt door de gang met een volle mok koffie ☕
+            </button>
+          </div>
+
+          <p class="quiz-feedback text-xs text-slate-600"></p>
+        </article>
+
+        <!-- Quizvraag 2 -->
+        <article class="bg-slate-50 rounded-3xl shadow-md p-5 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg">❓ Wat doe je eerst?</h3>
+          <p class="text-sm text-slate-600">
+            Je ziet iemand op de grond liggen in een druk lokaal. Wat doe je eerst?
+          </p>
+
+          <div class="grid grid-cols-1 gap-2 text-sm mt-2">
+            <button class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left" data-correct="true">
+              Eerst kijken of het veilig is 🔍
+            </button>
+
+            <button class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left" data-correct="false">
+              Meteen aan het slachtoffer zitten 🤲
+            </button>
+
+            <button class="quiz-item px-3 py-2 rounded-xl bg-amber-50 text-left" data-correct="false">
+              Weglopen en iemand anders zoeken 🚶
+            </button>
+          </div>
+
+          <p class="quiz-feedback text-xs text-slate-600"></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- extra uitleg -->
+    <section class="px-5 md:px-10 lg:px-20 py-10">
+      <div class="max-w-xl mx-auto bg-white rounded-3xl shadow-lg p-6 space-y-3">
+        <h2 class="font-['Baloo_2',system-ui] text-xl font-bold text-slate-900">
+          Waarom dit belangrijk is
+        </h2>
+        <p class="text-sm text-slate-600">
+          Als je eerst de situatie veilig maakt, voorkom je dat jij of anderen
+          ook gewond raken. Pas als het veilig is, ga je naar het slachtoffer
+          en kun je echte EHBO geven.
+        </p>
+        <p class="text-sm text-slate-600">
+          Onthoud:
+          <b>rustig blijven</b>, <b>kijken</b>, <b>denken</b> en dan pas
+          <b>doen</b>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-xs text-slate-500 pb-6">
+    Blok 1 – Onveilige situaties & risico’s • CALS EHBO Escape
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
 </html>

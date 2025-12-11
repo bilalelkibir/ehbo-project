@@ -10,9 +10,9 @@
 </head>
 
 <body class="bg-slate-50 text-slate-900">
-  <!-- HEADER -->
   <header
     class="sticky top-0 z-20 flex items-center justify-between px-5 md:px-10 py-3 bg-slate-50/90 backdrop-blur border-b border-slate-200/40">
+
     <div class="flex items-center gap-3">
       <img src="cals-logo.png" alt="CALS logo" class="w-10 h-10 rounded-full" />
       <div class="leading-tight font-semibold">
@@ -20,12 +20,28 @@
         <div class="text-sm">EHBO Escape</div>
       </div>
     </div>
+
+    <!-- Desktop menu -->
     <nav class="hidden md:flex gap-6 text-sm font-medium">
       <a href="index.html" class="hover:text-red-600">Home</a>
       <a href="blok1.html" class="hover:text-red-600">Blok 1</a>
-      <a href="blok3.html" class="text-red-600 border-b-2 border-red-600 pb-0.5">Blok 3</a>
+      <a href="blok3.html" class="hover:text-red-600">Blok 3</a>
     </nav>
+
+    <!-- Hamburger voor mobiel -->
+    <button id="mobileMenuBtn" class="md:hidden text-3xl">
+      ☰
+    </button>
   </header>
+
+  <!-- Mobiel menu (verstopt tot je klikt) -->
+  <nav id="mobileMenu"
+    class="md:hidden hidden flex-col bg-slate-50 border-b border-slate-200 px-5 py-3 text-sm font-medium">
+    <a href="index.html" class="py-2">Home</a>
+    <a href="blok1.html" class="py-2">Blok 1</a>
+    <a href="blok3.html" class="py-2">Blok 3</a>
+  </nav>
+
 
   <main>
     <!-- SUB HERO -->
@@ -252,67 +268,67 @@
 
 
         <!-- EHBO koffer -->
-<article class="bg-white rounded-3xl shadow-md p-5 flex flex-col gap-3">
-  <h3 class="font-semibold text-lg">🧰 Wat hoort in de EHBO-koffer?</h3>
-  <p class="text-sm text-slate-600">
-    Speel dit samen met iemand anders. De ander kan jou vragen wat wel en niet
-    in een EHBO-koffer hoort. Klik de juiste items aan.
-  </p>
+        <article class="bg-white rounded-3xl shadow-md p-5 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg">🧰 Wat hoort in de EHBO-koffer?</h3>
+          <p class="text-sm text-slate-600">
+            Speel dit samen met iemand anders. De ander kan jou vragen wat wel en niet
+            in een EHBO-koffer hoort. Klik de juiste items aan.
+          </p>
 
-  <div class="grid grid-cols-2 gap-2 text-sm mt-2 ehbo-kit-container">
+          <div class="grid grid-cols-2 gap-2 text-sm mt-2 ehbo-kit-container">
 
-    <!-- JUISTE items -->
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
-      Pleisterrol
-    </button>
+            <!-- JUISTE items -->
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
+              Pleisterrol
+            </button>
 
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
-      Steriel gaasje
-    </button>
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
+              Steriel gaasje
+            </button>
 
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
-      Verbandschaar
-    </button>
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
+              Verbandschaar
+            </button>
 
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
-      Wegwerphandschoenen
-    </button>
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
+              Wegwerphandschoenen
+            </button>
 
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
-      Desinfectiedoekjes
-    </button>
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
+              Desinfectiedoekjes
+            </button>
 
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
-      Snelverband
-    </button>
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
+              Snelverband
+            </button>
 
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
-      Zwachtel / rekverband
-    </button>
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
+              Zwachtel / rekverband
+            </button>
 
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
-      Pincet
-    </button>
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="true">
+              Pincet
+            </button>
 
-    <!-- FOUTE maar moeilijkere items -->
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="false">
-      Sporttape
-    </button>
+            <!-- FOUTE maar moeilijkere items -->
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="false">
+              Sporttape
+            </button>
 
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="false">
-      Neusspray
-    </button>
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="false">
+              Neusspray
+            </button>
 
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="false">
-      Massageolie
-    </button>
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="false">
+              Massageolie
+            </button>
 
-    <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="false">
-      Vitaminepillen
-    </button>
+            <button class="kit-item px-3 py-2 rounded-xl bg-emerald-50 text-left" data-correct="false">
+              Vitaminepillen
+            </button>
 
-  </div>
-</article>
+          </div>
+        </article>
 
       </div>
     </section>

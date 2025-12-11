@@ -227,3 +227,57 @@ quizItems.forEach((btn) => {
   }
 
 });
+
+// ===============================
+// Mobiel menu
+// ===============================
+
+const mobileBtn = document.getElementById("mobileMenuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (mobileBtn && mobileMenu) {
+  mobileBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+}
+
+
+// ===============================
+// Mobiel / iPad TAP-SWAP fallback voor volgorde puzzel
+// ===============================
+
+const isTouch = window.matchMedia("(pointer: coarse)").matches;
+
+if (isTouch && orderList) {
+  let firstSelected = null;
+
+  orderList.querySelectorAll("li").forEach((li) => {
+    li.draggable = false; // geen drag op mobiel
+
+    li.addEventListener("click", () => {
+      // Als nog geen item gekozen is
+      if (!firstSelected) {
+        firstSelected = li;
+        li.style.backgroundColor = "#e0e7ff"; // licht paars highlight
+        return;
+      }
+
+      // Als je 2e item tapt → wissel ze
+      if (firstSelected !== li) {
+        const nodes = Array.from(orderList.children);
+        const aIndex = nodes.indexOf(firstSelected);
+        const bIndex = nodes.indexOf(li);
+
+        if (aIndex < bIndex) {
+          orderList.insertBefore(firstSelected, li.nextSibling);
+        } else {
+          orderList.insertBefore(firstSelected, li);
+        }
+      }
+
+      // Reset highlight
+      firstSelected.style.backgroundColor = "";
+      firstSelected = null;
+    });
+  });
+}

@@ -1,184 +1,144 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>CALS EHBO Escape – Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Tailwind via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Eigen mini CSS -->
-    <link rel="stylesheet" href="custom.css" />
-  </head>
-  <body class="bg-slate-50 text-slate-900">
-    <!-- HEADER -->
-    <header
-      class="sticky top-0 z-20 flex items-center justify-between px-5 md:px-10 py-3 bg-slate-50/90 backdrop-blur border-b border-slate-200/40"
-    >
-      <div class="flex items-center gap-3">
-        <img
-          src="cals-logo.png"
-          alt="CALS logo"
-          class="w-10 h-10 rounded-full"
-        />
-        <div class="leading-tight font-semibold">
-          <div class="tracking-[0.18em] text-xs">CALS</div>
-          <div class="text-sm">EHBO Escape</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CALS EHBO Escape – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Eigen mini CSS -->
+  <link rel="stylesheet" href="custom.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+  <header
+    class="sticky top-0 z-20 flex items-center justify-between px-5 md:px-10 py-3 bg-slate-50/90 backdrop-blur border-b border-slate-200/40">
+
+    <div class="flex items-center gap-3">
+      <img src="cals-logo.png" alt="CALS logo" class="w-10 h-10 rounded-full" />
+      <div class="leading-tight font-semibold">
+        <div class="tracking-[0.18em] text-xs">CALS</div>
+        <div class="text-sm">EHBO Escape</div>
+      </div>
+    </div>
+
+    <!-- Desktop menu -->
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+      <a href="index.html" class="hover:text-red-600">Home</a>
+      <a href="blok1.html" class="hover:text-red-600">Blok 1</a>
+      <a href="blok3.html" class="hover:text-red-600">Blok 3</a>
+    </nav>
+
+    <!-- Hamburger voor mobiel -->
+    <button id="mobileMenuBtn" class="md:hidden text-3xl">
+      ☰
+    </button>
+  </header>
+
+  <!-- Mobiel menu (verstopt tot je klikt) -->
+  <nav id="mobileMenu"
+    class="md:hidden hidden flex-col bg-slate-50 border-b border-slate-200 px-5 py-3 text-sm font-medium">
+    <a href="index.html" class="py-2">Home</a>
+    <a href="blok1.html" class="py-2">Blok 1</a>
+    <a href="blok3.html" class="py-2">Blok 3</a>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="px-5 md:px-10 lg:px-20 py-10 grid md:grid-cols-2 gap-10 items-center">
+      <div class="max-w-xl space-y-4">
+        <p class="uppercase text-xs tracking-[0.25em] text-slate-500">
+          EHBO • Puzzel • Leren
+        </p>
+        <h1 class="text-3xl md:text-4xl font-bold leading-snug font-['Baloo_2',system-ui]">
+          Word de <span class="text-red-600">EHBO-held</span> van jouw klas.
+        </h1>
+        <p class="text-sm md:text-base text-slate-600">
+          Ontsnap uit de EHBO–escape door puzzels op te lossen over onveilige
+          situaties, wonden, brandwonden en oogletsel.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a href="blok1.html"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-red-600 text-white text-sm font-semibold shadow-lg shadow-red-600/30 hover:translate-y-[1px] transition">Start
+            met Blok 1</a>
+          <a href="blok3.html"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-white border border-slate-200 text-sm font-semibold hover:bg-slate-100">Of
+            ga naar Blok 3</a>
+        </div>
+
+        <div class="flex flex-wrap gap-2 text-xs mt-3">
+          <span class="px-3 py-1 rounded-full bg-white border border-slate-200">Leeftijd: <b>14–16 jaar</b></span>
+          <span class="px-3 py-1 rounded-full bg-white border border-slate-200">Niveau: <b>Beginner</b></span>
+          <span class="px-3 py-1 rounded-full bg-white border border-slate-200">Doel: <b>Veilig leren
+              handelen</b></span>
         </div>
       </div>
 
-      <nav class="hidden md:flex gap-6 text-sm font-medium">
-        <a href="index.html" class="text-red-600 border-b-2 border-red-600 pb-0.5"
-          >Home</a
-        >
-        <a href="blok1.html" class="hover:text-red-600">Blok 1</a>
-        <a href="blok3.html" class="hover:text-red-600">Blok 3</a>
-      </nav>
-    </header>
+      <!-- VISUAL -->
+      <div class="relative flex justify-center">
+        <div class="absolute -left-4 top-4 w-60 h-60 rounded-full bg-emerald-400"></div>
+        <div class="absolute right-0 bottom-3 w-40 h-40 rounded-full bg-amber-300"></div>
+        <div class="absolute right-10 -top-6 w-24 h-24 rounded-full bg-red-500"></div>
 
-    <main>
-      <!-- HERO -->
-      <section
-        class="px-5 md:px-10 lg:px-20 py-10 grid md:grid-cols-2 gap-10 items-center"
-      >
-        <div class="max-w-xl space-y-4">
-          <p class="uppercase text-xs tracking-[0.25em] text-slate-500">
-            EHBO • Puzzel • Leren
+        <div class="relative bg-white rounded-3xl shadow-2xl max-w-xs p-3 text-center">
+          <img src="EHBO-Kist.png" alt="Leerlingen oefenen EHBO" class="rounded-2xl mb-2" />
+          <p class="text-xs text-slate-600">
+            Leer EHBO via korte spellen en herkenbare situaties.
           </p>
-          <h1
-            class="text-3xl md:text-4xl font-bold leading-snug font-['Baloo_2',system-ui]"
-          >
-            Word de <span class="text-red-600">EHBO-held</span> van jouw klas.
-          </h1>
-          <p class="text-sm md:text-base text-slate-600">
-            Ontsnap uit de EHBO–escape door puzzels op te lossen over onveilige
-            situaties, wonden, brandwonden en oogletsel.
+        </div>
+      </div>
+    </section>
+
+    <!-- KORTE UITLEG -->
+    <section class="px-5 md:px-10 lg:px-20 pb-12">
+      <h2 class="font-['Baloo_2',system-ui] text-2xl font-bold mb-2 text-slate-900">
+        Wat ga je leren?
+      </h2>
+      <p class="text-sm md:text-base text-slate-600 max-w-xl">
+        Deze website sluit aan bij <b>Blok 1</b> en <b>Blok 3</b> van het
+        EHBO-boek. Je leert stap voor stap wat je moet doen als er iets
+        misgaat.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-5 mt-6">
+        <article class="bg-white rounded-3xl shadow-lg p-5 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg">Blok 1 – Onveilige situaties</h3>
+          <p class="text-sm text-slate-600">
+            Gevaarlijke situaties herkennen, bespreken wat er mis kan gaan en
+            leren hoe je ongelukken voorkomt.
           </p>
-
-          <div class="flex flex-wrap gap-3">
-            <a
-              href="blok1.html"
-              class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-red-600 text-white text-sm font-semibold shadow-lg shadow-red-600/30 hover:translate-y-[1px] transition"
-              >Start met Blok 1</a
-            >
-            <a
-              href="blok3.html"
-              class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-white border border-slate-200 text-sm font-semibold hover:bg-slate-100"
-              >Of ga naar Blok 3</a
-            >
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1 rounded-full bg-sky-200/80">Spot het gevaar</span>
+            <span class="px-3 py-1 rounded-full bg-sky-200/80">Wat doe je eerst?</span>
+            <span class="px-3 py-1 rounded-full bg-sky-200/80">Hulp inschakelen</span>
           </div>
+          <a href="blok1.html" class="mt-1 self-start btn-outline">Naar Blok 1</a>
+        </article>
 
-          <div class="flex flex-wrap gap-2 text-xs mt-3">
-            <span
-              class="px-3 py-1 rounded-full bg-white border border-slate-200"
-              >Leeftijd: <b>14–16 jaar</b></span
-            >
-            <span
-              class="px-3 py-1 rounded-full bg-white border border-slate-200"
-              >Niveau: <b>Beginner</b></span
-            >
-            <span
-              class="px-3 py-1 rounded-full bg-white border border-slate-200"
-              >Doel: <b>Veilig leren handelen</b></span
-            >
+        <article class="bg-white rounded-3xl shadow-lg p-5 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg">Blok 3 – Wonden & oogletsel</h3>
+          <p class="text-sm text-slate-600">
+            Oefen wat je doet bij wonden, brandwonden en oogletsel met
+            duidelijke flip-kaarten en een EHBO-koffer spel.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1 rounded-full bg-sky-200/80">EHBO-kaarten</span>
+            <span class="px-3 py-1 rounded-full bg-sky-200/80">EHBO-koffer</span>
+            <span class="px-3 py-1 rounded-full bg-sky-200/80">Scenario’s</span>
           </div>
-        </div>
+          <a href="blok3.html" class="mt-1 self-start btn-outline">Naar Blok 3</a>
+        </article>
+      </div>
+    </section>
+  </main>
 
-        <!-- VISUAL -->
-        <div class="relative flex justify-center">
-          <div
-            class="absolute -left-4 top-4 w-60 h-60 rounded-full bg-emerald-400"
-          ></div>
-          <div
-            class="absolute right-0 bottom-3 w-40 h-40 rounded-full bg-amber-300"
-          ></div>
-          <div
-            class="absolute right-10 -top-6 w-24 h-24 rounded-full bg-red-500"
-          ></div>
+  <footer class="text-center text-xs text-slate-500 pb-6">
+    Gemaakt als schoolproject voor CALS • EHBO Escapewebsite
+  </footer>
 
-          <div
-            class="relative bg-white rounded-3xl shadow-2xl max-w-xs p-3 text-center"
-          >
-            <img
-              src="EHBO-Kist.png"
-              alt="Leerlingen oefenen EHBO"
-              class="rounded-2xl mb-2"
-            />
-            <p class="text-xs text-slate-600">
-              Leer EHBO via korte spellen en herkenbare situaties.
-            </p>
-          </div>
-        </div>
-      </section>
+  <script src="script.js" defer></script>
+</body>
 
-      <!-- KORTE UITLEG -->
-      <section class="px-5 md:px-10 lg:px-20 pb-12">
-        <h2
-          class="font-['Baloo_2',system-ui] text-2xl font-bold mb-2 text-slate-900"
-        >
-          Wat ga je leren?
-        </h2>
-        <p class="text-sm md:text-base text-slate-600 max-w-xl">
-          Deze website sluit aan bij <b>Blok 1</b> en <b>Blok 3</b> van het
-          EHBO-boek. Je leert stap voor stap wat je moet doen als er iets
-          misgaat.
-        </p>
-
-        <div class="grid md:grid-cols-2 gap-5 mt-6">
-          <article
-            class="bg-white rounded-3xl shadow-lg p-5 flex flex-col gap-3"
-          >
-            <h3 class="font-semibold text-lg">Blok 1 – Onveilige situaties</h3>
-            <p class="text-sm text-slate-600">
-              Gevaarlijke situaties herkennen, bespreken wat er mis kan gaan en
-              leren hoe je ongelukken voorkomt.
-            </p>
-            <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-sky-200/80"
-                >Spot het gevaar</span
-              >
-              <span class="px-3 py-1 rounded-full bg-sky-200/80"
-                >Wat doe je eerst?</span
-              >
-              <span class="px-3 py-1 rounded-full bg-sky-200/80"
-                >Hulp inschakelen</span
-              >
-            </div>
-            <a href="blok1.html" class="mt-1 self-start btn-outline"
-              >Naar Blok 1</a
-            >
-          </article>
-
-          <article
-            class="bg-white rounded-3xl shadow-lg p-5 flex flex-col gap-3"
-          >
-            <h3 class="font-semibold text-lg">Blok 3 – Wonden & oogletsel</h3>
-            <p class="text-sm text-slate-600">
-              Oefen wat je doet bij wonden, brandwonden en oogletsel met
-              duidelijke flip-kaarten en een EHBO-koffer spel.
-            </p>
-            <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-sky-200/80"
-                >EHBO-kaarten</span
-              >
-              <span class="px-3 py-1 rounded-full bg-sky-200/80"
-                >EHBO-koffer</span
-              >
-              <span class="px-3 py-1 rounded-full bg-sky-200/80"
-                >Scenario’s</span
-              >
-            </div>
-            <a href="blok3.html" class="mt-1 self-start btn-outline"
-              >Naar Blok 3</a
-            >
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="text-center text-xs text-slate-500 pb-6">
-      Gemaakt als schoolproject voor CALS • EHBO Escapewebsite
-    </footer>
-
-    <script src="script.js" defer></script>
-  </body>
 </html>
